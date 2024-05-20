@@ -66,9 +66,9 @@ module.exports = {
         }),
         new ModuleFederationPlugin({
             name: 'KiwiApp',
-            fileName: 'remoteEntry.js',
+            filename: 'remoteEntry.js',
             exposes: {
-                'KiwiPage': './src/components/kiwi-page/kiwi-page.js'
+                './KiwiPage': './src/components/kiwi-page/kiwi-page.js'
             }
         })
     ]

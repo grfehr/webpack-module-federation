@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = {
-    entry: './src/kiwi.js',
+    entry: './src/dashboard.js',
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, './dist'),
@@ -45,7 +45,7 @@ module.exports = {
         new ModuleFederationPlugin({
             name: 'App',
             remotes: {
-                HellowWorldApp: 'HelloWorldApp@http://localhost:9001/remoteEntry.js',
+                HelloWorldApp: 'HelloWorldApp@http://localhost:9001/remoteEntry.js',
                 KiwiApp: 'KiwiApp@http://localhost:9002/remoteEntry.js'
             }
         })

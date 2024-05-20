@@ -42,7 +42,7 @@ module.exports = {
         new ModuleFederationPlugin({
             name: 'App',
             remotes: {
-                HellowWorldApp: 'HelloWorldApp@http://localhost:9001/remoteEntry.js',
+                HelloWorldApp: 'HelloWorldApp@http://localhost:9001/remoteEntry.js',
                 KiwiApp: 'KiwiApp@http://localhost:9002/remoteEntry.js'
             }
         })
